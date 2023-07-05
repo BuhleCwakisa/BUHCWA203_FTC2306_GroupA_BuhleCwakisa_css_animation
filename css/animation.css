@@ -1,17 +1,23 @@
- /* The animation code */
-@keyframes animatedSquare {
-  0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: green;}
+
+img {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  top: 50px;
+  animation: fb 2s linear infinite;
+
 }
 
-/* The element to apply the animation to */
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  animation-name: animatedSquare;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;    
-} 
+
+ @keyframes fb {
+    50%{
+      filter: hue-rotate(100deg);
+      transform: rotateY(100%);
+    }
+
+    to{
+      filter: hue-rotate(360deg);
+      transform: rotateY(360deg);
+    }
+ 
+}
